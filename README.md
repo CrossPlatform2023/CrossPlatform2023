@@ -5,7 +5,7 @@
 
 &ensp;&ensp;To bridge the gap, we perform an in-depth cross-platform analysis on Gitter and GitHub. Seven popular open source communities that both use Gitter and GitHub platforms are selected as our studied subjects, which leads to **`1,546,127`** utterances from **`37,060`** chatting developers on Gitter and **`395,664`** development activities contributed by **`89,858`** developers on GitHub, with cross-links between developer accounts on both platforms, referred as cross-platform developers (CPDs). Detailed statistics are shown in this table:
 
-
+![image](https://github.com/CrossPlatform2023/CrossPlatform2023/blob/main/images/dataset.png)<br>
 
 ### 1.1 Studied Communities
 &ensp;&ensp;We build our cross-platform dataset based on Shi et al.’s Gitter Data<sup>[1]</sup>. We select seven out of eight OSS communities from their dataset by excluding the one that does not host source code on GitHub. The selected communities include: [Angular](https://angular.io/), [Appium](http://appium.io/), [DL4J](https://deeplearning4j.org/), [Docker](https://www.docker.com/), [Ethereum](https://ethereum.org/en/), [Nodejs](https://nodejs.org/en/), and [Typescript](https://www.typescriptlang.org/) from the domains including frontend framework, mobile, data science, DevOps, blockchain platform, web application framework, and programming language, respectively.
@@ -34,7 +34,10 @@
     - In the social networks of **Deeplearning4j**, **Angular**, and **Typescript**, CPDs are focal points on both the Gitter network and the GitHub network. 
     - While in the social networks of **Appium**, **Docker**, **Nodejs**, and **Ethereum**, CPDs are focal points on the Gitter network but are non-focal points on the GitHub network.
 
+![image](https://github.com/CrossPlatform2023/CrossPlatform2023/blob/main/images/RQ1-both_focal.png)<br>
 
+
+![image](https://github.com/CrossPlatform2023/CrossPlatform2023/blob/main/images/RQ1-focal_only_in_Gitter.png)<br>
 
 
 ## 3 References
