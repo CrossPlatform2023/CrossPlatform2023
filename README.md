@@ -47,7 +47,7 @@ Furthermore, to show their importance in coordinating communication and developm
 
 ### 3.2 RQ2: CPDs' Communication Preference
 ![image](https://github.com/CrossPlatform2023/CrossPlatform2023/blob/main/images/RQ2-topic.png)<br>
-This table illustrates the dialog topic distribution for different roles of CPDs.
+This table illustrates the dialog topic distribution for different roles of CPDs. We can see that *core developers* prefer to participate in dialogs discussing "Design" and "Reliability issue". *Peripheral developers* are more likely to participate in social chatting and discuss unwanted behaviors and errors. *Issue reporters* are nearly the largest population that participates in all the topics, and their percentages range from 30.8% to 68.8%. Among all the dialogs, they discuss API changes most. The *reviewers* are worthy of the name, they also prefer to participate in conversations about code review on Gitter. They showed little preference for “API change”, “Design”, and “Learning. The *commenters* are less active in live communications. Some of them are interested in the topic of test/build failure and learning.
 
 | **Finding 3**: On the Gitter platform, core OSS developers are more interested in discussing reliability issues and designs, while peripheral OSS developers are more likely to participate in social chatting, discussing unwanted behaviors and errors.|
 | :-----|
@@ -89,7 +89,7 @@ Figure(a) shows two quadrants representing GitHub and Gitter, respectively. The 
 
 ### 3.5 RQ5: New Contributors attracted via Gitter
 ![image](https://github.com/CrossPlatform2023/CrossPlatform2023/blob/main/images/RQ5.png)<br>
-Among all the GitHub developers, we find that 2.5% (2,204/89,858) developers have participated in Gitter dialogs before their first contribution to GitHub. Limited by the effort, we randomly sample 200 of the dialogs, carefully read their utterances, and classify them into six categories as shown in this figure.
+Among all the GitHub developers, we find that 2.5% (2,204/89,858) developers have participated in Gitter dialogs before their first contribution to GitHub. Limited by the effort, we randomly sample 200 of the dialogs, carefully read their utterances, and classify them into six categories as shown in this figure.  In terms of motivation, 90.5% new contributors are self-motivated (NC1-4, NC6), and 7% are motivated by core developers. In terms of identity, 59.5% (NC1, NC3, NC6) are OSS product users, and 38% (NC2, NC4-5) are other developers who are interested in the OSS products. Note that, 2.5% are rare cases that are considered as others.
 
 | **Finding 9**: As a recently released communication platform, the amount of new contributors who are attracted via the Gitter platform accounts for 2.5% of the population. 3/5 of them are OSS product users, and 38% are other developers who are interested. Core developers are one of the motivating factors that can attract new contributors via Gitter.|
 | :-----|
