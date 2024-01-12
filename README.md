@@ -53,15 +53,17 @@ This table illustrates the dialog topic distribution for different roles of CPCs
 
 ### 3.3 RQ3: CPCs' Behavioral Consistency
 ![image](https://github.com/CrossPlatform2023/CrossPlatform2023/blob/main/images/RQ3-activeness.png)<br>
-This figure shows the correlation analysis result of Gitter and GitHub activeness. In most cases, CPCs tend to be more active in OSS development if they have more communications with other developers via Gitter. Some developers cluster near the horizontal and vertical axis instead of the center, indicating their 𝐴𝑐𝑡𝑖𝑣𝑒𝑛𝑒𝑠𝑠_𝐺𝑖𝑡𝑡𝑒𝑟 does not align with 𝐴𝑐𝑡𝑖𝑣𝑒𝑛𝑒𝑠𝑠_𝐺𝑖𝑡𝐻𝑢𝑏 all the time.
+The left figure shows the correlation analysis result of Gitter and GitHub activeness. There is only a weak and slight correlation between Gitter and GitHub activeness. Some developers cluster near the horizontal and vertical axis instead of the center, indicating their 𝐴𝑐𝑡𝑖𝑣𝑒𝑛𝑒𝑠𝑠_𝐺𝑖𝑡𝑡𝑒𝑟 does not align with 𝐴𝑐𝑡𝑖𝑣𝑒𝑛𝑒𝑠𝑠_𝐺𝑖𝑡𝐻𝑢𝑏 all the time. The far-out values that are highly active on one platform while much less active on the other might be because the developers’ effort is limited so they can not afford to be both highly active on Gitter and GitHub. 
 
-| **Finding 4**: CPCs tend to be more active in OSS development if they have more communications with other developers via Gitter.|
+The right figure visualizes the change of activeness correlation throughout time. In all cases, the correlation coefficient r rises to peak during the early stage of Gitter usage. Then r starts to decline until reaching a flattening out, where correlation is weak in the late and stable stage of OSS. This is probably related to the life cycle of software. When a software project is under development and testing in the early stage of its life cycle, GitHub activities such as code commits are of course frequent. In the meantime, developers could discuss these developmental problems on Gitter, resulting in a relevantly high correlation during this period. However, when the software project turns into a stable version, there are mainly maintenance tasks or easy bug-fixing tasks that need to be handled on the GitHub repository. However, with the prevalence of the software, more passive users or readers will participate in Gitter live chat, asking questions such as API usage, which are less relevant to GitHub developmental activities. The mismatch between Gitter discussion and GitHub contribution can lead to a reduced correlation level, therefore, we can observe the activeness correlation starts to drop to be a weak correlation during the late period of the software life cycle.
+
+| **Finding 4**: Macroly, there is merely a weak correlation between Gitter activeness and GitHub activeness. However, the activeness correlation changes according to the software life cycle, following a fast rise and a steady decline trend, until converging on a weak correlation.|
 | :-----|
 
 ![image](https://github.com/CrossPlatform2023/CrossPlatform2023/blob/main/images/RQ3-sankey.png)<br>
 This sankey diagram exhibits the flow of CPCs’ influence on GitHub and Gitter. The length of black lines represents the number of CPCs that fall into the corresponding SLC quarter. The width of the connections is proportional to the number of CPCs who shift from a quarter in one platform to a quarter in the other. We can see that about 70.2% connections are curved, which means most CPCs’ social influence largely migrates between platforms. 
 
-| **Finding 5**: The level of CPCs’ social influence frequently changes between Gitter and GitHub.|
+| **Finding 5**: The level of CPCs’ social influence frequently changes between Gitter and GitHub. Despite Some contributors have a low social influence level on GitHub, they can be highly influential on Gitter.|
 | :-----|
 
 ![image](https://github.com/CrossPlatform2023/CrossPlatform2023/blob/main/images/RQ3-overlap.png)<br>
@@ -76,15 +78,17 @@ This table shows the number of identified Gitter communication groups and GitHub
 ![image](https://github.com/CrossPlatform2023/CrossPlatform2023/blob/main/images/RQ5.png)<br>
 Among all the GitHub developers, we find that 2.5% (2,204/89,858) developers have participated in Gitter dialogs before their first contribution to GitHub. Limited by the effort, we randomly sample 200 of the dialogs, carefully read their utterances, and classify them into six categories as shown in this figure.  In terms of motivation, 90.5% new contributors are self-motivated (NC1-4, NC6), and 7% are motivated by core developers. In terms of identity, 59.5% (NC1, NC3, NC6) are OSS product users, and 38% (NC2, NC4-5) are other developers who are interested in the OSS products. Note that, 2.5% are rare cases that are considered as others.
 
-| **Finding 7**: As a recently released communication platform, the amount of new contributors who are attracted via the Gitter platform accounts for 2.5% of the population. 3/5 of them are OSS product users, and 38% are other developers who are interested. Core developers are one of the motivating factors that can attract new contributors via Gitter.|
+| **Finding 7**: As a recently released communication platform, the amount of new contributors who participated in live chat before first GitHub contribution accounts for 2.5% of the population. 56.7% of them are OSS product users, and 39.6% are other interested developers. Core developers are one of the motivating factors that can attract new contributors via Gitter.|
 | :-----|
 
 #### 3.4.2 Impact on Onboarded Contributors
 ![image](https://github.com/CrossPlatform2023/CrossPlatform2023/blob/main/images/RQ4-contribution.png)<br>
 
-This violin plot compares the CPCs’ GitHub contribution (committing, issue reporting, reviewing, and commenting) with that of other GitHub developers. The inside box plots show the quartiles and median of the distribution, and the horizontal red line denotes the mean value. We can see that the contribution from CPCs outstrips non-CPCs in terms of all four types of development activities. The middle and upper part of the violin of CPCs is wider than non-CPCs, indicating CPCs include more active contributors. A number of non-CPCs cluster at the bottom of the violin makes the upper part less wide, which means there are more one-time contributors in developers who do not chat on Gitter.
+The violin plot in Figure 9(a) compares the CPCs’ GitHub contribution (committing, issue reporting, reviewing, and commenting) with that of other GitHub developers. The inside box plots show the quartiles and median of the distribution, and the horizontal red line denotes the mean value. We can see that the contribution from CPCs outstrips non-CPCs in terms of all four types of development activities. The middle and upper part of the violin of CPCs is wider than non-CPCs, indicating CPCs include more active contributors. A number of non-CPCs cluster at the bottom of the violin makes the upper part less wide, which means there are more one-time contributors in developers who do not chat on Gitter.
 
-| **Finding 8**: The communication on Gitter has a positive impact on GitHub onboard contributions. GitHub developers who communicate on Gitter have a significantly higher contribution than those who do not communicate on Gitter.|
+However, according to Figure 9(b), only the p-value for PR approval time is less than 0.001, indicating CPC- proposed pull requests take a shorter time to be resolved than those proposed by non-CPCs. While p-values for other activities are all larger than 0.1. From the violin plots, we can see that the data distribution of Response rate, Issue closure rate, PR approval rate and Commit frequency of CPC and non-CPCs is quite similar, while CPC’s Issue resolution time are slightly longer than that of non-CPCs.
+
+| **Finding 8**: The communication on Gitter might have a positive impact on some GitHub onboarded contributions, since GitHub developers who communicate on Gitter have a significantly higher contribution with regard to commit, issue, review, comment and PR approval time than those who do not communicate on Gitter.|
 | :-----|
 
 #### 3.4.3 Impact on Returned Contributers
