@@ -76,7 +76,7 @@ This table shows the number of identified Gitter communication groups and GitHub
 
 ### 3.4 RQ4: Gitter's Impact on OSS Contribution
 #### 3.4.1 Impact on New Contributors
-![image](https://github.com/CrossPlatform2023/CrossPlatform2023/blob/main/images/RQ5.png)<br>
+![image](https://github.com/CrossPlatform2023/CrossPlatform2023/blob/main/images/RQ4-1.png)<br>
 Among all the GitHub developers, we find that 2.5% (2,204/89,858) developers have participated in Gitter dialogs before their first contribution to GitHub. Limited by the effort, we randomly sample 200 of the dialogs, carefully read their utterances, and classify them into six categories as shown in this figure.  In terms of motivation, 90.5% new contributors are self-motivated (NC1-4, NC6), and 7% are motivated by core developers. In terms of identity, 59.5% (NC1, NC3, NC6) are OSS product users, and 38% (NC2, NC4-5) are other developers who are interested in the OSS products. Note that, 2.5% are rare cases that are considered as others.
 
 | **Finding 7**: As a recently released communication platform, the amount of new contributors who participated in live chat before first GitHub contribution accounts for 2.5% of the population. 56.7% of them are OSS product users, and 39.6% are other interested developers. Gitter plays a positive role in promoting issue reporting and resolving. Core developers are one of the motivating factors that can attract new contributors via Gitter.|
