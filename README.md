@@ -21,7 +21,7 @@ Seven popular open source communities that both use Gitter and GitHub platforms 
 ### (2) Data Collection
 &ensp;&ensp;For Gitter data, we select the Gitter utterances provided by Shi et al.<sup>[1]</sup> and extend it to `"2022-09-25"`, and collect accounts of utterance posters in the chatroom.
 
-&ensp;&ensp;For GitHub data, we leverage [GitHub REST API](https://docs.github.com/en/rest) to obtain activity records including commits, issue reports, and pull requests. Each one of them contains the following information: activity conductor, time, activity description, and the id-number. Commenters' information (commenting time, username) is recorded in issues and pull requests as well. Additionally, pull requests also contain their reviewers and related commits. The GitHub data is as of `"2022-09-25"` as well. When processing the data from GitHub, we first remove automatic bot accounts using the classification model proposed by Golzadeh et al.<sup>[2]</sup> that achieves an F1-score of 0.98, and then resolve aliases using the method proposed by Vasilescu et al.<sup>[3]</sup>. 
+&ensp;&ensp;For GitHub data, we leverage [GitHub REST API](https://docs.github.com/en/rest) to obtain activity records including commits, issue reports, and pull requests. Each one of them contains the following information: activity conductor, time, activity description, and the id-number. Commenters' information (commenting time, username) is recorded in issues and pull requests as well. Additionally, pull requests also contain their reviewers and related commits. The GitHub data is as of `"2022-09-25"` as well. When processing the data from GitHub, we first remove automatic bot accounts using the classification model proposed by Golzadeh et al.<sup>[2]</sup> that achieves an F1-score of 0.98, and then resolve aliases using the [method](https://github.com/bvasiles/ght_unmasking_aliases) proposed by Vasilescu et al.<sup>[3]</sup>. 
 
 ## 3 Results
 ### 3.1 RQ1: CPCs' Role and Contribution
@@ -46,18 +46,19 @@ Furthermore, to show their importance in coordinating communication and developm
 
 ### 3.2 RQ2: CPCs' Communication Preference
 ![image](https://github.com/CrossPlatform2023/CrossPlatform2023/blob/main/images/RQ2-topic.png)<br>
-This table illustrates the dialog topic distribution for different roles of CPCs. We can see that *core developers* prefer to participate in dialogs discussing "Design" and "Reliability issue". *Peripheral developers* are more likely to participate in social chatting and discuss unwanted behaviors and errors. *Issue reporters* are nearly the largest population that participates in all the topics, and their percentages range from 30.8% to 68.8%. Among all the dialogs, they discuss API changes most. The *reviewers* are worthy of the name, they also prefer to participate in conversations about code review on Gitter. They showed little preference for “API change”, “Design”, and “Learning”. The *commenters* are less active in live communications. Some of them are interested in the topic of test/build failure and learning.
+This table illustrates the dialog topic distribution for different roles of CPCs. We can see that *core developers* prefer to participate in dialogs discussing "Design". *Peripheral developers* are more likely to participate in social chatting and discuss unwanted behaviors and errors. *Issue reporters* are nearly the largest population that participates in all the topics, and their percentages range from 29.6% to 66.7%. Among all the dialogs, they discuss API changes most. The *reviewers* are worthy of the name, they also prefer to participate in conversations about code review and reliability issues on Gitter. They showed little preference for “API change,” “Unwanted behavior,” and
+“Design.” The *commenters* are not interested in API change (6.1%), however, they showed similar interest in other topics, ranging from 15.4% to 22.8%.
 
-| **Finding 3**: On the Gitter platform, core OSS developers are more interested in discussing reliability issues and designs, while peripheral OSS developers are more likely to participate in social chatting, discussing unwanted behaviors and errors.|
+| **Finding 3**: On the Gitter platform, core OSS developers are more interested in discussing designs, while peripheral OSS developers are more likely to participate in social chatting, discussing unwanted behaviors and errors.|
 | :-----|
 
 ### 3.3 RQ3: CPCs' Behavioral Consistency
 ![image](https://github.com/CrossPlatform2023/CrossPlatform2023/blob/main/images/RQ3-activeness.png)<br>
 The left figure shows the correlation analysis result of Gitter and GitHub activeness. There is only a weak and slight correlation between Gitter and GitHub activeness. Some developers cluster near the horizontal and vertical axis instead of the center, indicating their 𝐴𝑐𝑡𝑖𝑣𝑒𝑛𝑒𝑠𝑠_𝐺𝑖𝑡𝑡𝑒𝑟 does not align with 𝐴𝑐𝑡𝑖𝑣𝑒𝑛𝑒𝑠𝑠_𝐺𝑖𝑡𝐻𝑢𝑏 all the time. The far-out values that are highly active on one platform while much less active on the other might be because the developers’ effort is limited so they can not afford to be both highly active on Gitter and GitHub. 
 
-The right figure visualizes the change of activeness correlation throughout time. In all cases, the correlation coefficient r rises to peak during the early stage of Gitter usage. Then r starts to decline until reaching a flattening out, where correlation is weak in the late and stable stage of OSS. This is probably related to the life cycle of software. When a software project is under development and testing in the early stage of its life cycle, GitHub activities such as code commits are of course frequent. In the meantime, developers could discuss these developmental problems on Gitter, resulting in a relevantly high correlation during this period. However, when the software project turns into a stable version, there are mainly maintenance tasks or easy bug-fixing tasks that need to be handled on the GitHub repository. However, with the prevalence of the software, more passive users or readers will participate in Gitter live chat, asking questions such as API usage, which are less relevant to GitHub developmental activities. The mismatch between Gitter discussion and GitHub contribution can lead to a reduced correlation level, therefore, we can observe the activeness correlation starts to drop to be a weak correlation during the late period of the software life cycle.
+The right figure visualizes the change of cumulative activeness correlation throughout time. In all cases, the correlation coefficient r rises to peak during the early stage of Gitter usage. Then r starts to decline until reaching a flattening out, where correlation is weak in the late and stable stage of OSS.  This is probably related to the evolution of the OSS community. When Gitter was first introduced to these projects, the project contributors were actively developing and testing on GitHub and discussing these developmental problems on Gitter, resulting in a relevantly high correlation during this period. However, with the evolution and growth of the OSS communities, more commenters and issue reporters were engaged in Gitter live chat, asking questions such as API usage that are less relevant to GitHub developmental activities and making occasional contributions. Additionally, the active contributor might retire or take breaks from making GitHub contributions but are still active on Gitter.11 These CPCs’ discussions are active on Gitter but their contribution is much less on GitHub, leading to a mismatch and thereby a weakening correlation relationship.
 
-| **Finding 4**: Macroly, there is merely a weak correlation between Gitter activeness and GitHub activeness. However, the activeness correlation changes according to the software life cycle, following a fast rise and a steady decline trend, until converging on a weak correlation.|
+| **Finding 4**: Broadly, there is merely a weak correlation between Gitter activeness and GitHub activeness. However, the cumulative activeness correlation changes over time, following a fast rise and a steady decline trend, until converging on a weak correlation.|
 | :-----|
 
 ![image](https://github.com/CrossPlatform2023/CrossPlatform2023/blob/main/images/RQ3-sankey.png)<br>
@@ -78,7 +79,7 @@ This table shows the number of identified Gitter communication groups and GitHub
 ![image](https://github.com/CrossPlatform2023/CrossPlatform2023/blob/main/images/RQ5.png)<br>
 Among all the GitHub developers, we find that 2.5% (2,204/89,858) developers have participated in Gitter dialogs before their first contribution to GitHub. Limited by the effort, we randomly sample 200 of the dialogs, carefully read their utterances, and classify them into six categories as shown in this figure.  In terms of motivation, 90.5% new contributors are self-motivated (NC1-4, NC6), and 7% are motivated by core developers. In terms of identity, 59.5% (NC1, NC3, NC6) are OSS product users, and 38% (NC2, NC4-5) are other developers who are interested in the OSS products. Note that, 2.5% are rare cases that are considered as others.
 
-| **Finding 7**: As a recently released communication platform, the amount of new contributors who participated in live chat before first GitHub contribution accounts for 2.5% of the population. 56.7% of them are OSS product users, and 39.6% are other interested developers. Core developers are one of the motivating factors that can attract new contributors via Gitter.|
+| **Finding 7**: As a recently released communication platform, the amount of new contributors who participated in live chat before first GitHub contribution accounts for 2.5% of the population. 56.7% of them are OSS product users, and 39.6% are other interested developers. Gitter plays a positive role in promoting issue reporting and resolving. Core developers are one of the motivating factors that can attract new contributors via Gitter.|
 | :-----|
 
 #### 3.4.2 Impact on Onboarded Contributors
@@ -91,7 +92,7 @@ However, according to Figure 9(b), only the p-value for PR approval time is less
 | **Finding 8**: The communication on Gitter might have a positive impact on some GitHub onboarded contributions, since GitHub developers who communicate on Gitter have a significantly higher contribution with regard to commit, issue, review, comment and PR approval time than those who do not communicate on Gitter.|
 | :-----|
 
-#### 3.4.3 Impact on Returned Contributers
+#### 3.4.3 Impact on Returned Code Contributers
 ![image](https://github.com/CrossPlatform2023/CrossPlatform2023/blob/main/images/RQ4-return.png)<br>
 
 Figure(a) shows two quadrants representing GitHub and Gitter, respectively. The upper quadrant shows the number of developers in the corresponding GitHub states, and the lower quadrant tells us how many of them communicate in the Gitter platform when they are in the corresponding state. In spite of being inactive (BREAK or GONE) on GitHub, about 2.7% of developers participate in live chat in the meantime. This indicates that not making any contribution to the GitHub repository does not mean the contributors leave the communit. They might be active on other platforms that are related to this project, such as communicating on live chat. Inspired by this phenomenon, we further investigate whether developers who communicate on live chat have a higher possibility of return. As shown in Figure(b), G1 (developers who use Gitter) has a higher probability of returning to ACTIVE than G2 (developers who do not use Gitter) by 7.1%, indicating live chat communication has a positive effect on inactive developers’ returning.
@@ -117,6 +118,9 @@ Figure(a) shows two quadrants representing GitHub and Gitter, respectively. The 
 
 ### images/
 - This folder contains images of the dataset and results.
+
+### scripts/
+- scripts to collect and process data
 
 
 ## 5 References
